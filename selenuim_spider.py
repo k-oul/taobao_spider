@@ -8,8 +8,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pyquery import PyQuery as pq
-from config import *
 from selenium.webdriver.chrome.options import Options
+
+MONGO_URL = 'localhost'
+MONGO_DB = 'taobao'
+MONGO_TABLE = 'product'
 
 client = pymongo.MongoClient(MONGO_URL)
 db = client[MONGO_DB]
